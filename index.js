@@ -53,7 +53,38 @@ function addGroup() {
 
 function controlPressHeader(event) {
     const altText = event.target.getAttribute('alt');
-    if (altText === "removeGroupButton") {
+    const groupHeaderText = event.target.parentElement.parentElement.children[0];
+    if (altText === "addItemButton") {
+        let newTitle = prompt("Please enter an item title");
+        if (newTitle != null) {
+            const groupItems = event.target.parentElement.parentElement.parentElement.children[1];
+
+            groupItems.innerHTML +=
+                `
+                <div class="groupItem">
+                    <div class="itemText">${newTitle}</div>
+                    <div class="itemControls">
+                        <div class="itemControlButton" alt="editButtonItem" onclick="controlPressItem(event)">E</div>
+                        <div class="itemControlButton" alt="strikethroughButton" onclick="controlPressItem(event)">S</div>
+                        <div class="itemControlButton" alt="removeItemButton" onclick="controlPressItem(event)">R</div>
+                    </div>
+                </div>
+                `
+
+        }
+    } else if (altText === "editButtonHeader") {
+        let currentTitle = groupHeaderText.textContent;
+        let groupTitle = prompt("Please enter a group title", currentTitle);
+        if (groupTitle != null) {
+            groupHeaderText.textContent = groupTitle;
+        }
+    } else if (altText === "strikethroughButtonHeader") {
+        if (groupHeaderText.style.textDecoration === "") {
+            groupHeaderText.style.textDecoration = "line-through";
+        } else {
+            groupHeaderText.style.textDecoration = "";
+        }
+    } else if (altText === "removeGroupButton") {
         event.target.parentElement.parentElement.parentElement.remove();
     }
 
@@ -70,7 +101,11 @@ function controlPressItem(event) {
     const parent = event.target.parentElement.parentElement;
     const itemText = parent.children[0]
     if (altText === "editButtonItem") {
-        console.log('a');
+        let currentTitle = itemText.textContent;
+        let itemTitle = prompt("Please enter an item title", currentTitle);
+        if (itemTitle != null) {
+            itemText.textContent = itemTitle;
+        }
     } else if (altText == "strikethroughButton") {
         if (itemText.style.textDecoration === "") {
             itemText.style.textDecoration = "line-through";
@@ -78,7 +113,6 @@ function controlPressItem(event) {
             itemText.style.textDecoration = "";
         }
     } else if (altText == "removeItemButton") {
-        console.log('c');
         parent.parentElement.removeChild(parent);
     }
 }
