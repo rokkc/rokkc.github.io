@@ -1,9 +1,11 @@
 var i = 1;
-addGroup();
 
 if (localStorage.getItem("bodyState") != null) {
-    document.body.innerHTML = localStorage.getItem("bodyState");
-    $('.group').draggable({containment: "window", handle: $('.groupHeader')});
+    addGroup();
+    //document.body.innerHTML = localStorage.getItem("bodyState");
+    //$('.group').draggable({containment: "window", handle: $('.groupHeader')});
+} else {
+    addGroup();
 }
 
 function addGroup() {
@@ -91,7 +93,7 @@ function controlPressHeader(event) {
 
 }
 
-window.setInterval(saveState, 2000)
+//window.setInterval(saveState, 2000)
 
 function saveState() {
     localStorage.setItem("bodyState", document.body.innerHTML);
