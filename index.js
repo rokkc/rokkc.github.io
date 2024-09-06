@@ -3,6 +3,7 @@ addGroup();
 
 if (localStorage.getItem("bodyState") != null) {
     document.body.innerHTML = localStorage.getItem("bodyState");
+    $('.group').draggable({containment: "window", handle: $('.groupHeader')});
 }
 
 function addGroup() {
