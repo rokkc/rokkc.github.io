@@ -72,10 +72,11 @@ body {
     background: #303032;
     cursor: pointer;
     border: none;
-    color: white;
     transition: 0.075s;
-    line-height: 40px;
+    line-height: 30px;
     border-radius: 100px;
+    font-size: 15px;
+    color: #d6d6d6;
 }
 
 .headerControlButton:hover {
@@ -92,7 +93,6 @@ body {
 
 .groupItem {
     color: white;
-    font-size: 20px;
     display: flex;
 }
 
@@ -124,10 +124,11 @@ body {
     background: #303032;
     cursor: pointer;
     border: none;
-    color: white;
     transition: 0.075s;
-    line-height: 40px;
     border-radius: 100px;
+    color: #d6d6d6;
+    text-align: center;
+    line-height: 30px;
 }
 
 .itemControlButton:hover {
