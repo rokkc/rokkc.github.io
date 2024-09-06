@@ -91,7 +91,7 @@ function controlPressHeader(event) {
 
 }
 
-window.setInterval(saveState, 10000)
+window.setInterval(saveState, 2000)
 
 function saveState() {
     localStorage.setItem("bodyState", document.body.innerHTML);
