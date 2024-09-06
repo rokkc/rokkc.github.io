@@ -1,0 +1,135 @@
+body {
+    background: black;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+
+}
+
+#addGroupButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background: #303032;
+    border: none;
+    color: #d6d6d6;
+    font-size: 25px;
+    border-radius: 100px;
+    transition: 0.075s;
+}
+
+#addGroupButton:hover {
+    scale: 1.1;
+}
+
+.group {
+    height: fit-content;
+    width: fit-content;
+    min-width: 350px;
+    position: absolute;
+    border-radius: 10px;
+    background: #1f1f21;
+}
+
+.groupHeader {
+    background: #161617;
+    height: 40px;
+    cursor: move;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.groupHeaderText {
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    border-radius: 10px 0 0 0;
+}
+
+.groupHeaderControls {
+    border-radius: 0 10px 0 0;
+    flex-basis: fit-content;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    gap: 7.5px;
+}
+
+.headerControlButton {
+    height: 30px;
+    width: 30px;
+    background: #303032;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: 0.075s;
+    line-height: 40px;
+    border-radius: 100px;
+}
+
+.headerControlButton:hover {
+    scale: 1.075;
+}
+
+.groupItems {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.groupItem {
+    color: white;
+    font-size: 20px;
+    display: flex;
+}
+
+.itemText {
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.itemControls {
+    border-radius: 0 10px 0 0;
+    flex-basis: fit-content;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    gap: 7.5px;
+}
+
+.itemControlButton {
+    height: 30px;
+    width: 30px;
+    background: #303032;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: 0.075s;
+    line-height: 40px;
+    border-radius: 100px;
+}
+
+.itemControlButton:hover {
+    scale: 1.075;
+}
