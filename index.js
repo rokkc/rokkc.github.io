@@ -2,7 +2,7 @@ var i = 1;
 addGroup();
 
 if (localStorage.getItem("bodyState") != null) {
-    //document.body.innerHTML = localStorage.getItem("bodyState");
+    document.body.innerHTML = localStorage.getItem("bodyState");
 }
 
 function addGroup() {
@@ -52,14 +52,17 @@ function addGroup() {
 
 
 function controlPressHeader(event) {
-    console.log("banana")
+    const altText = event.target.getAttribute('alt');
+    if (altText === "removeGroupButton") {
+        event.target.parentElement.parentElement.parentElement.remove();
+    }
+
 }
 
 window.setInterval(saveState, 10000)
 
 function saveState() {
-    //localStorage.setItem("bodyState", document.body.innerHTML);
-    localStorage.setItem("bodyState", null);
+    localStorage.setItem("bodyState", document.body.innerHTML);
 }
 
 function controlPressItem(event) {
