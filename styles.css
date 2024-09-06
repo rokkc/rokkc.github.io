@@ -17,6 +17,7 @@ body {
     font-size: 25px;
     border-radius: 100px;
     transition: 0.075s;
+    z-index: 2;
 }
 
 #addGroupButton:hover {
@@ -134,4 +135,13 @@ body {
 
 .itemControlButton:hover {
     scale: 1.075;
+}
+
+#groupContainer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 10px;
 }

@@ -1,7 +1,17 @@
-addGroup();
+const groupCont = document.getElementById("groupContainer");
+const oldContent = localStorage.getItem("bodyState");
+
+if (oldContent === null) {
+    addGroup();
+} else {
+    groupCont.innerHTML = oldContent;
+
+    $('.group').draggable({containment: "window", handle: $('.groupHeader')});
+}
+
 
 function addGroup() {
-    document.body.innerHTML +=
+    groupCont.innerHTML +=
         `
         <div class="group">
     <div class="groupHeader">
@@ -85,10 +95,10 @@ function controlPressHeader(event) {
 
 }
 
-//window.setInterval(saveState, 2000)
+window.setInterval(saveState, 2000)
 
 function saveState() {
-    localStorage.setItem("bodyState", document.body.innerHTML);
+    localStorage.setItem("bodyState", groupCont.innerHTML);
 }
 
 function controlPressItem(event) {
