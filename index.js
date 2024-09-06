@@ -1,5 +1,3 @@
-var i = 1;
-
 addGroup();
 
 function addGroup() {
