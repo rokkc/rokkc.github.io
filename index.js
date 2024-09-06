@@ -1,12 +1,6 @@
 var i = 1;
 
-if (localStorage.getItem("bodyState") != null) {
-    addGroup();
-    //document.body.innerHTML = localStorage.getItem("bodyState");
-    //$('.group').draggable({containment: "window", handle: $('.groupHeader')});
-} else {
-    addGroup();
-}
+addGroup();
 
 function addGroup() {
     document.body.innerHTML +=
